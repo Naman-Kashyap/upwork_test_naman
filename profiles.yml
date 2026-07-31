@@ -1,0 +1,20 @@
+dbt_template:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: GCP_PROJECT_ID
+      dataset: DBT_DATASET_NAME 
+      threads: 4  
+      OPTIONAL_CONFIG: VALUE
+
+    prod:
+      type: bigquery
+      method: oauth
+      project: GCP_PROJECT_ID
+      dataset: DBT_DATASET_NAME 
+      threads: 4  
+      OPTIONAL_CONFIG: VALUE
+
+  target: dev
