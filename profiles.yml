@@ -1,10 +1,10 @@
-dbt_template:
+upwork:
   target: dev
   outputs:
     dev:
       type: bigquery
       method: oauth
-      project: GCP_PROJECT_ID
+      project: upwork-test-504106
       dataset: DBT_DATASET_NAME 
       threads: 4  
       OPTIONAL_CONFIG: VALUE
@@ -12,7 +12,7 @@ dbt_template:
     prod:
       type: bigquery
       method: oauth
-      project: GCP_PROJECT_ID
+      project: upwork-test-504106
       dataset: DBT_DATASET_NAME 
       threads: 4  
       OPTIONAL_CONFIG: VALUE
