@@ -5,16 +5,18 @@ upwork:
       type: bigquery
       method: oauth
       project: upwork-test-504106
-      dataset: DBT_DATASET_NAME 
+      dataset: dev
       threads: 4  
+      location: EU
       OPTIONAL_CONFIG: VALUE
 
     prod:
       type: bigquery
       method: oauth
       project: upwork-test-504106
-      dataset: DBT_DATASET_NAME 
+      dataset: prod
       threads: 4  
+      location: EU
       OPTIONAL_CONFIG: VALUE
 
   target: dev

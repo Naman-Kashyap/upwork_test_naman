@@ -1,23 +1,31 @@
 version: 2
 
 sources:
-  - name: Schema  # Logical name for the source
-    database: Project ID  # BigQuery project ID
-    schema: Dataset  # BigQuery dataset
+  - name: Meta_Ads # Logical name for the source
+    database: upwork-test-504106 # BigQuery project ID
+    schema: Meta_Ads  # BigQuery dataset
     tables:
-      - name: ad_insights # name you want to call it
-        identifier: ad_insights # name for the source table
-        description: "Contains data about ** source synced from Connector Name."
-      - name: account_analytics # name you want to call it
-        identifier: account_performance # name for the source table
-        description: "Contains data about ** source synced from Connector Name."
-  - name: Schema  # Logical name for the source
-    database: Project ID  # BigQuery project ID
-    schema: Dataset  # BigQuery dataset
-    tables:
-      - name: campaigns
-        identifier: campaigns
-        description: "Contains data about ** source synced from Connector Name."
-      - name: campaign_analytics
-        identifier: ad_campaign_analytics
-        description: "Contains data about ** source synced from Connector Name."
+
+      - name: ad_sets # name you want to call it
+        identifier: ad_sets # name for the source table
+        description: "Contains data about Meta Ads source synced from Airbyte."
+
+      - name: ads # name you want to call it
+        identifier: ads # name for the source table
+        description: "Contains data about Meta Ads source synced from Airbyte."
+
+      - name: ads_insights # name you want to call it
+        identifier: ads_insights # name for the source table
+        description: "Contains data about Meta Ads source synced from Airbyte."
+
+      - name: ads_insights_action_type # name you want to call it
+        identifier: ads_insights_action_type # name for the source table
+        description: "Contains data about Google Ads source synced from Airbyte."
+
+      - name: campaigns # name you want to call it
+        identifier: campaigns # name for the source table
+        description: "Contains data about Meta Ads source synced from Airbyte."
+
+      - name: custom_conversions # name you want to call it
+        identifier: custom_conversions # name for the source table
+        description: "Contains data about Meta Adssource synced from Airbyte."
