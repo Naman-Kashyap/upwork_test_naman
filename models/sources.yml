@@ -4,28 +4,62 @@ sources:
   - name: Meta_Ads # Logical name for the source
     database: upwork-test-504106 # BigQuery project ID
     schema: Meta_Ads  # BigQuery dataset
+    loaded_at_field: _airbyte_extracted_at # set once here, inherited by all tables below
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
     tables:
 
       - name: ad_sets # name you want to call it
         identifier: ad_sets # name for the source table
         description: "Contains data about Meta Ads source synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
 
       - name: ads # name you want to call it
         identifier: ads # name for the source table
         description: "Contains data about Meta Ads source synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
 
       - name: ads_insights # name you want to call it
         identifier: ads_insights # name for the source table
         description: "Contains data about Meta Ads source synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
 
       - name: ads_insights_action_type # name you want to call it
         identifier: ads_insights_action_type # name for the source table
         description: "Contains data about Google Ads source synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
 
       - name: campaigns # name you want to call it
         identifier: campaigns # name for the source table
         description: "Contains data about Meta Ads source synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
 
       - name: custom_conversions # name you want to call it
         identifier: custom_conversions # name for the source table
         description: "Contains data about Meta Adssource synced from Airbyte."
+        columns:
+          - name: _airbyte_raw_id
+            tests:
+              - unique
+              - not_null
